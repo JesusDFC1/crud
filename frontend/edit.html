@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="" rel="" integrity="">
+    <link rel="" href="">
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+    <title>Gestor de contraseñas</title>
+</head>
+<body style="background-color: rgb(172, 197, 230)">
+    <div id="main" class="container">
+        <div id="marco" class="container my-5 text-center">
+            <h1>Gestor de contraseñas - Editar</h1>
+            <div class="form-group">
+                <label for="plataforma">Plataforma: </label><br>
+                <input type="text" class="form-control" name="plataforma" id="plataforma" placeholder="plataforma">
+            </div>
+            <div class="form-group">
+                <label for="usuario">Usuario: </label><br>
+                <input type="text" class="form-control" name="usuario" id="usuario" placeholder="usuario">
+            </div>
+            <div class="form-group">
+                <label for="clave">Clave: </label><br>
+                <input type="text" class="form-control" name="clave" id="clave" placeholder="clave">
+            </div><br><br>
+            <div class="card">
+                <button type='button' class="btn btn-info" onclick="modificar()"> <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSkrKGoioS4GrBAsbfA0qKVU-Gt9TP4XHtSw&usqp=CAU' height='30' width='30'/>Guardar</button>
+            </div><br>
+            <div class="card">
+                 <button type='button' class="btn btn-warning" onclick="location.href ='index.html'"> <img src='data:image/png;base64,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' height='30' width='30'/>Regresar</button>
+            </div>
+         </div>
+      </div>
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              let id = getParameterByName('variable1');
+              consulta_individual(id);
+          });
+
+          
+
+          
+
+          function getParameterByName(name) {
+              name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+              var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+              return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+          }
+      </script>
+</body>
+</html>
+

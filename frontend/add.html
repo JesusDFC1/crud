@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="" rel="" integrity="">
+    <link rel="" href="">
+    <script src="app.js"></script>
+    <script src=""></script> 
+    <title>Gestor de contraseñas</title>
+</head>
+<body style="background-color: rgb(172, 197, 230)">
+    <div id="main" class="container">
+        <div id="marco" class="container my-5 text-center">
+            <h1>Gestor de contraseñas</h1>
+            <div class="form-group">
+                <label for="plataforma">Plataforma:</label>
+            <input type="text" class="form-control" name="plataforma" id="plataforma" placeholder="plataforma">
+            </div>
+            
+            <div class="form-group">
+                <label for="usuario">Usuario: </label><br>
+                <input type="text" class="form-control" name="usuario" id="usuario" placeholder="usuario">
+            </div>
+                
+            <div class="form-group">
+                <label for="clave">Clave: </label><br>
+                <input type="text" class="form-control" name="clave" id="clave" placeholder="clave">
+            </div><br><br>
+            <div class="tarjeta">
+              <button type="button" class="btn btn-info" onclick="registrar()"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSkrKGoioS4GrBAsbfA0qKVU-Gt9TP4XHtSw&usqp=CAU" height="30" width="30"/>Guardar</button>
+                
+            </div><br>
+            <div class="tarjeta">
+                  <button type="button" class="btn btn-warning" onclick="location.href = 'index.html'"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAY1BMVEX///8AAAD09PRQUFD8/Pzj4+P39/cEBATS0tK/v7+QkJASEhKLi4tXV1fX19dAQECwsLCioqIfHx8oKCjs7Ox4eHg2Nja4uLgYGBhxcXFdXV1mZmbLy8ubm5tHR0d/f38vLy+W2/Q+AAAEA0lEQVR4nO2b2YKrIAxARXGtS20dnU6t9v+/ctTuypJqFB44z3O5pwECQbAsg8FgMBgMBoPBYFgf21ZtMMGLk7+9aol3qGUFJenQysqqfjslnyRUtcgLryU3HH2GVeEQ7aQqQrSTioh2Uq5D9JKi1KozopmURXNC9JKilncmuklZdTl2Ui+197sUrpeUd5qESblU6rCc1EqFTCWlUrTlOCmUchOekzqp8MB1UiYVkWkmUCzl/vHDpEqq34nz46RAik7XX+VS9JbERXHaWqqrUuqj1GlzqaGI0qv77JM0ShtLUasQZwIlkQpBYdpWKoaFqWOzst1lb52Y7LLyvjLujs25jfOwTt0Vohcc4U4sDqVzjioXNYSR/L+F0cRhiiHUzbofLKeeY9IGyyMWCLZOM/mNw2VjLN+hO/WZJTuls+Nlo3bdJ03uznJyM2jGnMU1Lr4U6qK7x++6Me2X0bLhSXwBhxY+5qmoiMKjHxuHfOgWCOH6XffECWBOaEkcRg4IlaSIWoHSlfVhfd3aqcvyoq8nXRG1cdc9iD1+rNZM4mLO3B5MIQXLSjhufwI+ZYMkLqApGLHyflZd62T4JGPsAS/qhO5k01gxDqC3pplsHJQrkWEO6tZ9Ha1eA/1O9SlFFaeEO5MpqDJ5PmgmC466ZeZFPJLqFmT1w33H2PWp2Lp8kjGWwO03eZ/47Lspwm8KG0gdmRVhqHgWRiypbUosAaxdzFbFKJdxWrjnBrXp/cor6Fc+4BBz4UgpTe8Hfh24wqEZlJArZaX4x4tAJtu9t/GOexD7BQfhSbKikpnkIqnFh/szyYRSw2cQBblBdsgHT+8+3qrJTVUPwJ/WmiAI6joMqzxuz5n87wXw598NCt5kOd7oX7p1Hp2SckbCK+Vnx4s+19puGl7O9wkDHp61VIpaFeTXir+MBtEJ3KW+fFD11IDcIP1cW6T7EzBWDegwm33j7TupgSAGbSIBLVFIAQaQov2BnZ3m8o6EfiUJprcoZ0TqRnqReFXyNm6gXlUq6kQ0vmJ4S8IV+ut7CW7MXwNk6fMd5OtvRcSb1ck3jWFeFOxnvXdhawFy+ntL2Fcqix9WZhZv9KZUjDbmS3XhSicXtglkofkE/ZouZQxVQfXABv9CszupB2Y8DdrjSnV9WF2J/5642AcdYvAvyaefOX58gA0C+TkBvZ2bvzjNawb/4UX8tg1MZjnRcRciXH97+53l3DbwH/Pkz1hd5zeC/uzpOa2PCxpBfyD2+Jm/SxopGlwp656Yd4saec5kJKliyFc+ZJcuYijAfPKH4tRtu5fNvoH+Ievw+QTtIesQevFxEATUJ7+UXhxneWt93eTJ/wzaGtXxqbXBYDAYDAaDwWDQkX9tvzfGNEXF+QAAAABJRU5ErkJggg==" alt="30" width="30">Atras</button>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
