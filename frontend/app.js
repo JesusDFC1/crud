@@ -70,8 +70,7 @@ fetch(url)
 .catch( error => console.log(error) )
 const visualizar = (data,id) => {
 console.log(data)
-//
-document.getElementById("id_baul").value=data.baul[i].id_baul
+//document.getElementById("id_baul").value=data.baul[i].id_baul
 document.getElementById("plataforma").value=data.baul.Plataforma
 document.getElementById("usuario").value=data.baul.usuario
 document.getElementById("clave").value=data.baul.clave
